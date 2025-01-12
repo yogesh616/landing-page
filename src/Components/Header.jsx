@@ -24,7 +24,7 @@ function Header() {
         <div className='flex items-center justify-between flex-wrap'>
           {/* Logo */}
           <div className='text-2xl font-bold text-center'>
-            <span>LOGO</span>
+            <span>Republic Guru</span>
           </div>
 
           {/* Search Bar */}
