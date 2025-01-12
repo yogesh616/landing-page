@@ -34,7 +34,8 @@ function Footer() {
 
       {/* Copyright Text */}
       <div className='w-full text-center py-4 text-pink-300 text-sm sm:text-lg'>
-        <p>Copyright © 2025 Pine Labs Pvt. Ltd. All rights reserved.</p>
+        <p>Copyright © 2025 by <a className='cursor-pointer' href="https://republicguru.com/" target='_blank'>Republic Guru.</a></p>
+        <p>Passionately Created And Desinated By ~ <a className='cursor-pointer' href="https://sharvinmanagement.com/" target='_black'>Sharvin Management Pvt. Ltd.</a></p>
       </div>
     </div>
   );
