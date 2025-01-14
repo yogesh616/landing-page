@@ -83,16 +83,16 @@ const navigate = useNavigate()
           setSelectedProduct(product)
           navigate('/product')
          }}>
-            <div className='relative group'>
-            <img
-           src={product.image}
-           alt={product.name}
-           className="rounded-md w-full object-contain h-48 md:h-64 lg:h-72 transition-transform duration-300 ease-in-out group-hover:scale-105"
-         />
-          <p className="text-white bg-pink-500 py-2  text-xs font-semibold rounded-s-lg inline-block absolute top-0 left-1 -translate-x-1.5 px-2">
-           {product.offer}
-         </p>
-            </div>
+            <div className="relative group">
+  <img
+    src={product.image}
+    alt={product.name}
+    className="rounded-md w-full object-cover max-h-48 md:h-64 lg:h-72 transition-transform duration-300 ease-in-out group-hover:scale-105"
+  />
+  <p className="text-white bg-pink-500 py-2 text-xs font-semibold rounded-s-lg inline-block absolute top-0 left-1 -translate-x-1.5 px-2 transition-all duration-300 ease-in-out group-hover:top-[-0.5rem] group-hover:left-[-0.5rem]">
+    {product.offer}
+  </p>
+</div>
         
         
          
