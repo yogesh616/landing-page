@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import AuBank from "../BannerImages/AUBank.png";
 import DBS_D from "../BannerImages/DBS-D.png";
 import DBS_D_Banner from "../BannerImages/DBS_D_Banner.png";
 import Lenskart_D from "../BannerImages/Lenskart-D.png";
@@ -22,7 +22,7 @@ function BannerImages() {
   };
 
   const BannerImages = [
-   
+    AuBank,
     DBS_D,
     DBS_D_Banner,
     Lenskart_D,
