@@ -4,21 +4,21 @@ function BuyOne() {
   const cards = [
     {
       id: 1,
-      title: "MakeMyTrip Hotel E-Gift Card",
+      title: "Taj Hotel",
       description: "Buy a MakeMyTrip Hotel Gift Card & get a complimentary...",
-      img: "https://images.freekaamaal.com/featured_images/158846_makemytrip-gift-card-thumbnail.png",
+      img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/f2c87863147935.5aa799ab2775d.jpg",
     },
     {
       id: 2,
-      title: "MakeMyTrip Hotel E-Gift Card",
+      title: "MakeMyTrip Hotel ",
       description: "Go, Discover this Magical World!",
-      img: "https://images-na.ssl-images-amazon.com/images/I/51wDPBpPLHL._SX342_.jpg",
+      img: "https://www.biddingforgood.com/orgs/mid-atlanticcenter/341727893/343815162.336.255.jpg",
     },
     {
       id: 3,
-      title: "MakeMyTrip Hotel E-Gift Card",
+      title: "MakeMyTrip Hotel ",
       description: "Enjoy the magical beaches with MakeMyTrip Gift Cards!",
-      img: "https://store.engageloop.in/cdn/shop/products/57955Snx3u_1200x1200.jpg?v=1620981335",
+      img: "https://www.holualoainn.com/wp-content/uploads/2018/12/beach-gift.jpg",
     }
   ];
 
@@ -41,7 +41,7 @@ function BuyOne() {
               <img src={card.img} alt={card.title} className='w-full h-56 object-cover' />
               <div className='px-6 py-4'>
                 <div className='font-bold text-xl mb-2'>{card.title}</div>
-                <p className='text-gray-700 text-base'>{card.description}</p>
+                <p className='text-gray-700 text-base opacity-0'>{card.description}</p>
               </div>
             </div>
           ))}
