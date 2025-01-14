@@ -34,7 +34,7 @@ function BannerImages() {
   const imageHeight = "360px"; // Set your desired height here
 
   return (
-    <div className="w-full md:mt-8 lg:mt-36 px-2 sm:px-8 mt-64">
+    <div className="w-full md:mt-44 lg:mt-36 px-2 sm:px-8 mt-10">
       <Slider {...settings}>
         {BannerImages.map((image, index) => (
           <div key={index} className="w-full sm:p-4 block text-center border-0">
