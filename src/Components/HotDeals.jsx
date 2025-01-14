@@ -1,72 +1,263 @@
 import React from 'react'
 
+/*
+import TitanEye from '../assets/TitanEye.png'
+import MG from '../assets/1-MG.png'
+import GoldJewelleryPCJ from '../assets/GoldJewelleryPCJ.png'
+import EmperioArmani from '../assets/EmperioArmani.png'
+import HugoBoss from '../assets/HugoBoss.png'
+import LunchBox from '../assets/LunchBox.png'
+import TheSkinStory from '../assets/TheSkinStory.png'
+import SuratDiamondJewellery from '../assets/SuratDiamondJewellery.png'
+import aldo from '../assets/aldo.png'
+import Aliste from '../assets/Aliste.png'
+import AllenSollyGiftCards from '../assets/AllenSollyGiftCards.png'
+import AllenSolly from '../assets/Allen-Solly.png'
+import AmazonShoppingGiftVoucher from '../assets/Amazon-Shopping-Gift-Voucher.png'
+import AmazonFreshShopping from '../assets/AmazonFreshShopping.jpeg'
+import AmazonPrimeGiftCard from '../assets/AmazonPrimeGiftCard.png'
+import AmericanEagle from '../assets/AmericanEagle.png'
+import AppyHighPrime from '../assets/AppyHighPrime.png'
+import BakingoSeoShoppingAdsBakingo from '../assets/BakingoSeoShoppingAdsBakingo.jpeg'
+import BATH_BODYWORK from '../assets/BATH&BODYWORK.png'
+import BehrouzBiryani from '../assets/BehrouzBiryani.png'
+import BEVERLYHILLSPOLOCLUB from '../assets/BEVERLYHILLSPOLOCLUB.png'
+*/
+
+// import food images 
+import { Zomato, Swiggy, PizzaHutt, Kfc, EatSure, Dominos, BehrouzBiryani ,ShoppersStop } from '../FoodImages/FoodImages'
+import { useNavigate } from 'react-router-dom'
+import { useProduct } from '../Context/ProductContext'
+
 function HotDeals() {
+
+ const navigate = useNavigate()
+  const { setSelectedProduct } = useProduct()
+ /*
   const products = [
     {
-      name: "Reliance Jio Mart E-Gift",
-      details: "Applicable on payment via UPI",
+      name: "Titan Eye",
+     
       offer: "Flat 4% off",
       code: "JM4",
-      maxRedeem: "Redeem up to ₹200.00",
-      image: "https://m.media-amazon.com/images/I/31NgKdnFmZL.jpg"
+      
+      image: TitanEye
     },
     {
-      name: "Amazon Pay Gift Card",
-      details: "Applicable on all prepaid transactions",
+      name: "Tata 1MG",
+      
       offer: "Flat 5% cashback",
       code: "AMZ5",
-      maxRedeem: "Redeem up to ₹300.00",
-      image: "https://images-eu.ssl-images-amazon.com/images/G/31/gc/designs/livepreview/a_generic_grey_in_noto_email_in-main._CB288131155_.png"
+     
+      image: MG
     },
     {
-      name: "Flipkart E-Gift Voucher",
-      details: "Applicable on selected categories",
+      name: "Gold Jewellery PCJ",
+     
       offer: "Flat 3% off",
       code: "FLK3",
-      maxRedeem: "Redeem up to ₹150.00",
-      image: "https://www.trend10.in/wp-content/uploads/2022/12/flipkart-egift-card.jpg"
+     
+      image: GoldJewelleryPCJ
     },
     {
-      name: "Myntra Gift Card",
-      details: "Applicable on clothing and accessories",
+      name: "Emperio Armani",
+     
       offer: "Flat 7% off",
       code: "MYN7",
-      maxRedeem: "Redeem up to ₹250.00",
-      image: "https://assets.myntassets.com/v1/assets/images/2017/10/10/11507642302132-3864-p96540.jpg"
+     
+      image: EmperioArmani
     },
     {
-      name: "Big Bazaar E-Gift",
-      details: "Applicable on groceries and home essentials",
+      name: "Hugo Boss",
+     
       offer: "Flat 6% off",
       code: "BB6",
-      maxRedeem: "Redeem up to ₹200.00",
-      image: "https://d1ixo36kppfedg.cloudfront.net/faceview/i5b/ge/j3i/b7a/imgs/1583564799684_22_15_combo323-originnm80prcnt.jpg?productId=P-3867437"
+      
+      image: HugoBoss
     },
     {
-      name: "Zomato Gift Card",
-      details: "Applicable on online food orders",
+      name: "Lunch Box",
+     
       offer: "Flat 10% cashback",
       code: "ZMT10",
-      maxRedeem: "Redeem up to ₹100.00",
-      image: "https://cdn.merchant-console.yougotagift.com/media/brands/image/9c4ff3a6-1759-4c4d-8872-646e6d45c5f3.png"
+      
+      image: LunchBox
     },
     {
-      name: "Swiggy E-Gift",
-      details: "Applicable on all orders above ₹300",
+      name: "The Skin Story",
+      
       offer: "Flat 8% off",
       code: "SWG8",
-      maxRedeem: "Redeem up to ₹120.00",
-      image: "https://www.bestomart.com/cdn/shop/products/1000103889_grande.jpg?v=1653107200"
+   
+      image: TheSkinStory
     },
     {
-      name: "Nykaa Gift Card",
-      details: "Applicable on beauty products",
+      name: "Suraj Diamond Jewellery",
+      
       offer: "Flat 5% off",
       code: "NYK5",
-      maxRedeem: "Redeem up to ₹200.00",
-      image: "https://cdn.grabon.in/gograbon/giftbycard/images/product/1532676909853/nykaa-gift-card.jpg"
+      
+      image: SuratDiamondJewellery
+    },
+    {
+      name: "Aldo",
+     
+      offer: "Flat 4% off",
+      code: "JM4",
+      
+      image: aldo
+    },
+    {
+      name: "Aliste",
+     
+      offer: "Flat 4% off",
+      code: "JM4",
+      
+      image: Aliste
+    },
+    {
+      name: "Allen Solly Gift Cards",
+      offer: "Flat 4% off",
+      code: "JM4",
+      
+      image: AllenSollyGiftCards
+    },
+    {
+      name: "Allen-Solly",
+      offer: "Flat 4% off",
+      code: "JM4",
+      
+      image: AllenSolly
+    },
+    {
+      name: "Amazon Shopping Gift Voucher",
+      
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: AmazonShoppingGiftVoucher
+    },
+    {
+      name: "Amazon Fresh Shopping",
+      
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: AmazonFreshShopping
+    },
+    {
+      name: "Amazon Prime Gift Card",
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: AmazonPrimeGiftCard
+    },
+    {
+      name: "American Eagle",
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: AmericanEagle
+    },
+    {
+      name: "Appy High Prime",
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: AppyHighPrime
+    },
+    {
+      name: "Bakingo SEO Shopping Ads Bakingo",
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: BakingoSeoShoppingAdsBakingo
+    },
+    {
+      name: "BATH & BODYWORK",
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: BATH_BODYWORK
+    },
+    {
+      name: "Behrouz Biryani",
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: BehrouzBiryani
+    },
+    {
+      name: "BEVERLY HILLS POLOCLUB",
+      offer: "Flat 5% off",
+      code: "NYK5",
+      
+      image: BEVERLYHILLSPOLOCLUB
     }
   ];
+
+*/
+
+const products = [
+  {
+    name: "Zomato",
+    offer: "Flat 5% off",
+    code: "NYK5",
+    
+    image: Zomato
+  },
+  {
+    name: "Swiggy",
+    offer: "Flat 5% off",
+    code: "NYK5",
+    
+    image: Swiggy
+  },
+  {
+    name: "Pizza Hut",
+    offer: "Flat 5% off",
+    code: "NYK5",
+    
+    image: PizzaHutt
+  },
+  {
+    name: "KFC",
+    offer: "Flat 5% off",
+    code: "NYK5",
+    
+    image: Kfc
+  },
+  {
+    name: "Eat Sure",
+    offer: "Flat 5% off",
+    code: "NYK5",
+    
+    image: EatSure
+  },
+  {
+    name: "Dominos",
+    offer: "Flat 5% off",
+    code: "NYK5",
+    
+    image: Dominos
+  },
+  {
+    name: "Shoppers Stop",
+    offer: "Flat 5% off",
+    code: "NYK5",
+    
+    image: ShoppersStop
+  },
+  {
+    name: "Behrouz Biryani",
+    offer: "Flat 5% off",
+    code: "NYK5",
+    
+    image: BehrouzBiryani
+  }
+]
+
+
 
   return (
     <div className="p-8 bg-gray-100">
@@ -74,27 +265,34 @@ function HotDeals() {
         Hot Deals and Best Sellers
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product, index) => (
-          <div key={index} className="border rounded-lg shadow-md p-4 max-w-sm bg-white group">
+        {  products.map((product, index) => (
+          <div key={index} className="border rounded-lg shadow-md p-4 max-w-sm bg-white group cursor-pointer"
+          onClick={() => {
+            setSelectedProduct(product)
+            localStorage.setItem('selectedProduct', JSON.stringify(product))
+            navigate('/product')
+          }
+           
+          }>
             <div className="relative">
               <img
                 src={product.image}
                 alt={product.name}
-                className="rounded-md w-full object-cover h-48 md:h-64 lg:h-72 transition-transform duration-300 ease-in-out group-hover:scale-105"
+                className="rounded-md w-full object-cover max-h-48 md:h-64 lg:h-72 transition-transform duration-300 ease-in-out group-hover:scale-105"
               />
               <p className="text-white bg-pink-500 py-2 text-xs font-semibold rounded-s-lg inline-block absolute top-0 left-1 -translate-x-1.5 px-2">
                 {product.offer}
               </p>
+             
             </div>
-            <h3 className="text-lg font-bold mt-2">{product.name}</h3>
-            <p className="text-gray-500 text-sm">{product.details}</p>
-            <div className="flex items-center justify-between mt-4 gap-1">
-              <div className="bg-black text-white text-sm px-3 py-1 rounded-lg">
-                Use Code: {product.code}
+           
+           
+            <div className="flex items-center flex-col justify-between mt-4 gap-1">
+              <h3 className="text-lg font-bold mt-2">{product.name}</h3>
+              <div className=" text-zinc-900 border-[1px] border-orange-500 text-sm px-3 py-1 rounded-lg">
+                Promo code
               </div>
-              <div className="text-yellow-500 text-sm font-medium">
-                {product.maxRedeem}
-              </div>
+             
             </div>
           </div>
         ))}

@@ -2,6 +2,32 @@ import React, { useState, useEffect } from 'react';
 
 function Header() {
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const dropdownItems = [
+    {
+      label: 'Food',
+      icon: '<i class="fa-solid fa-bowl-food"></i>',
+    },
+    {
+      label: 'Education',
+      icon: '<i class="fa-solid fa-school"></i>',
+    },
+    { label: 'E-Commerce',
+      icon: '<i class="fa-solid fa-cart-shopping"></i>'
+     },
+    { label: 'Health & Beauty',
+      icon: '<i class="fa-solid fa-user-doctor"></i>'
+     },
+    { label: 'Finance/Crypto',
+      icon: '<i class="fa-solid fa-coins"></i>'
+     },
+    { label: 'Fashion',
+      icon: '<i class="fa-solid fa-shirt"></i>'
+     },
+    { label: 'Marketing',
+      icon: '<i class="fa-solid fa-chart-simple"></i>'
+     },
+  ];
+  
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -18,9 +44,9 @@ function Header() {
   }, []);
 
   return (
-    <div className='w-full fixed top-0 bg-[#19141a] z-50'>
+    <div className='w-full  block sm:fixed top-0 bg-[#19141a] z-50'>
       {/* Navbar */}
-      <header className='text-white p-4'>
+      <header className='text-white p-2'>
         <div className='flex items-center justify-between flex-wrap'>
           {/* Logo */}
           <div className='text-2xl font-bold text-center'>
@@ -96,13 +122,19 @@ function Header() {
             Categories
           </button>
           {dropdownVisible && (
-            <div className='absolute bg-white text-black shadow-md mt-1 rounded-md w-40'>
+            <div className='absolute bg-white text-black shadow-md mt-1 rounded-md w-44'>
               <ul className='space-y-2 p-2'>
-                <li className='px-1 hover:text-slate-700 cursor-pointer transition-all duration-300 text-slate-300'>Category 1</li>
-                <hr />
-                <li className='px-1 hover:text-slate-700 cursor-pointer transition-all duration-300 text-slate-300'>Category 2</li>
-                <hr />
-                <li className='px-1 hover:text-slate-700 cursor-pointer transition-all duration-300 text-slate-300'>Category 3</li>
+               {
+                dropdownItems.map((item, index) => (
+                  <li key={index} className='px-1 hover:text-slate-700 text-base cursor-pointer transition-all duration-300 text-slate-300 flex items-center gap-2 justify-start'>
+                 <span dangerouslySetInnerHTML={{ __html: item.icon }}></span>
+
+                  <span>{item.label}</span>
+                  </li>
+                ))
+               }
+                
+               
               </ul>
             </div>
           )}

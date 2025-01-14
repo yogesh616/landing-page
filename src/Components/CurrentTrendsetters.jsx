@@ -1,73 +1,76 @@
 import React from 'react'
-
+import { AmazonFresh, AmazonSeoAmazonGiftCard, AmazonShoppingGiftVoucher, AmazonShoppingVoucher, Bigbasket, FlipkartGiftCard, Myntra_Gift_Card, Nykaa, TataCliq } from '../EcommerseImages/EcommerseImages.js'
+import { useNavigate } from 'react-router-dom'
+import { useProduct } from '../Context/ProductContext'
 function CurrentTrendsetters() {
-
-    const products = [
-        {
-          name: "Reliance Jio Mart E-Gift",
-          details: "Applicable on payment via UPI",
-          offer: "Flat 4% off",
-          code: "JM4",
-          maxRedeem: "Redeem up to ₹200.00",
-          image: "https://m.media-amazon.com/images/I/31NgKdnFmZL.jpg"
-        },
-        {
-          name: "Amazon Pay Gift Card",
-          details: "Applicable on all prepaid transactions",
-          offer: "Flat 5% cashback",
-          code: "AMZ5",
-          maxRedeem: "Redeem up to ₹300.00",
-          image: "https://images-eu.ssl-images-amazon.com/images/G/31/gc/designs/livepreview/a_generic_grey_in_noto_email_in-main._CB288131155_.png"
-        },
-        {
-          name: "Flipkart E-Gift Voucher",
-          details: "Applicable on selected categories",
-          offer: "Flat 3% off",
-          code: "FLK3",
-          maxRedeem: "Redeem up to ₹150.00",
-          image: "https://www.trend10.in/wp-content/uploads/2022/12/flipkart-egift-card.jpg"
-        },
-        {
-          name: "Myntra Gift Card",
-          details: "Applicable on clothing and accessories",
-          offer: "Flat 7% off",
-          code: "MYN7",
-          maxRedeem: "Redeem up to ₹250.00",
-          image: "https://assets.myntassets.com/v1/assets/images/2017/10/10/11507642302132-3864-p96540.jpg"
-        },
-        {
-          name: "Big Bazaar E-Gift",
-          details: "Applicable on groceries and home essentials",
-          offer: "Flat 6% off",
-          code: "BB6",
-          maxRedeem: "Redeem up to ₹200.00",
-          image: "https://d1ixo36kppfedg.cloudfront.net/faceview/i5b/ge/j3i/b7a/imgs/1583564799684_22_15_combo323-originnm80prcnt.jpg?productId=P-3867437"
-        },
-        {
-          name: "Zomato Gift Card",
-          details: "Applicable on online food orders",
-          offer: "Flat 10% cashback",
-          code: "ZMT10",
-          maxRedeem: "Redeem up to ₹100.00",
-          image: "https://cdn.merchant-console.yougotagift.com/media/brands/image/9c4ff3a6-1759-4c4d-8872-646e6d45c5f3.png"
-        },
-        {
-          name: "Swiggy E-Gift",
-          details: "Applicable on all orders above ₹300",
-          offer: "Flat 8% off",
-          code: "SWG8",
-          maxRedeem: "Redeem up to ₹120.00",
-          image: "https://www.bestomart.com/cdn/shop/products/1000103889_grande.jpg?v=1653107200"
-        },
-        {
-          name: "Nykaa Gift Card",
-          details: "Applicable on beauty products",
-          offer: "Flat 5% off",
-          code: "NYK5",
-          maxRedeem: "Redeem up to ₹200.00",
-          image: "https://cdn.grabon.in/gograbon/giftbycard/images/product/1532676909853/nykaa-gift-card.jpg"
-        }
-      ];
+const navigate = useNavigate()
+  const { setSelectedProduct } = useProduct()
+  const products = [
+    {
+      name: "Amazon Fresh",
+      offer: "Flat 5% off",
+      code: " ",
+      description: "20% Off on Home and Kitchen Appliances",
+      referral_url: "https://www.amazon.in/Home-Improvement/b?ie=UTF8&node=4286640031&linkCode=ll2&tag=rajvansh017-21&linkId=6ea6043bcd0d23119ef45a1f49022ca7&language=en_IN&ref_=as_li_ss_tl",
+      image: AmazonFresh
+    },
+    {
+      name: "Amazon Seo",
+      offer: "Flat 5% off",
+      code: " ",
+      description: " 500 On Beuty Deals",
+      referrral_url: "https://www.amazon.in/gp/browse.html?node=1355016031&linkCode=ll2&tag=rajvansh017-21&linkId=02e1628fb0e048bbb1aa035446cfe14c&language=en_IN&ref_=as_li_ss_tl",
+      image: AmazonSeoAmazonGiftCard
+    },
+    {
+      name: "Amazon Shopping Gift",
+      offer: "Flat 5% off",
+      code: " ",
+      description: "20% on Kitchen Electronics",
+      referral_url: "https://www.amazon.in/Home-Kitchen/b?ie=UTF8&node=976442031&linkCode=ll2&tag=rajvansh017-21&linkId=0287d720a3abad43e326d8bdee813f44&language=en_IN&ref_=as_li_ss_tl",
+      image: AmazonShoppingGiftVoucher
+    },
+    {
+      name: "Amazon Shopping",
+      offer: "Flat 5% off",
+      code: " ",
+      description: "5000 Discount on Aircondition",
+      referral_url: "https://www.amazon.in/s?k=AC&crid=1NG3OC12U50PE&sprefix=ac%2Caps%2C254&linkCode=ll2&tag=rajvansh017-21&linkId=a06472739130ec28138e299a878bdaff&language=en_IN&ref_=as_li_ss_tl",
+      image: AmazonShoppingVoucher
+    },
+    {
+      name: "Tata Cliq",
+      offer: "Flat 5% off",
+      code: " ",
+      description: "",
+      referral_url: "https://bitli.in/r5o7m0c",
+      image: TataCliq
+    },
+    {
+      name: "Flipkart",
+      offer: "Flat 5% off",
+      code: " ",
+      description: "",
+      referral_url: "",
+      image: FlipkartGiftCard
+    },
+    {
+      name: "Myntra",
+      offer: "Flat 5% off",
+      code: " ",
+      description: "",
+      referral_url: "https://myntr.it/i4LuZh2",
+      image: Myntra_Gift_Card
+    },
+    {
+      name: "Nykaa",
+      offer: "Flat 5% off",
+      code: " ",
+      description: "Get Upto 40% Off on Bestsellers",
+      referral_url: "https://bitli.in/Az3SKj9",
+      image: Nykaa
+    }
+  ]
   return (
     <div className=" bg-gray-100">
     <h1 className="text-4xl font-bold text-center mb-6">
@@ -75,12 +78,16 @@ function CurrentTrendsetters() {
     </h1>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-10">
       {products.map((product, index) => (
-         <div key={index} className="border rounded-lg shadow-md p-4 max-w-sm ">
+         <div key={index} className="border rounded-lg shadow-md p-4 max-w-sm cursor-pointer" 
+         onClick={() => {
+          setSelectedProduct(product)
+          navigate('/product')
+         }}>
             <div className='relative group'>
             <img
            src={product.image}
            alt={product.name}
-           className="rounded-md w-full object-cover h-48 md:h-64 lg:h-72 transition-transform duration-300 ease-in-out group-hover:scale-105"
+           className="rounded-md w-full object-contain h-48 md:h-64 lg:h-72 transition-transform duration-300 ease-in-out group-hover:scale-105"
          />
           <p className="text-white bg-pink-500 py-2  text-xs font-semibold rounded-s-lg inline-block absolute top-0 left-1 -translate-x-1.5 px-2">
            {product.offer}
@@ -88,16 +95,15 @@ function CurrentTrendsetters() {
             </div>
         
         
-         <h3 className="text-lg font-bold mt-2">{product.name}</h3>
-         <p className="text-gray-500 text-sm">{product.details}</p>
-         <div className="flex items-center justify-between mt-4 gap-1">
-           <div className="bg-black text-white text-sm px-3 py-1 rounded-lg">
-             Use Code: {product.code}
-           </div>
-           <div className="text-yellow-500 text-sm font-medium">
-              {product.maxRedeem}
-           </div>
-         </div>
+         
+         <div className="flex items-center flex-col justify-between mt-4 gap-1">
+              <h3 className="text-lg font-bold mt-2">{product.name}</h3>
+              <p className="text-gray-500 text-sm">{product.description}</p>
+              <div className=" text-zinc-900 border-[1px] border-orange-500 text-sm px-3 py-1 rounded-lg">
+                Promo code
+              </div>
+             
+            </div>
        </div>
       ))}
     </div>

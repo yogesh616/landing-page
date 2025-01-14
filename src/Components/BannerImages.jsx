@@ -1,43 +1,54 @@
-import React from 'react'
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AuBank from "../BannerImages/AuBank.png";
+import DBS_D from "../BannerImages/DBS-D.png";
+import DBS_D_Banner from "../BannerImages/DBS_D_Banner.png";
+import Lenskart_D from "../BannerImages/Lenskart-D.png";
+import Gyftr_Nykaa_D from "../BannerImages/Gyftr_Nykaa_D.png";
+import Reward_program_d from "../BannerImages/Reward_program_d.png";
+import DBS_D_Banner1 from "../BannerImages/DBS_D_Banner1.png";
 
 function BannerImages() {
-    let settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true, // You can add autoplay if you'd like it to auto-slide
-        autoplaySpeed: 3000, // Speed for auto-slide in milliseconds
-    };
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
 
-    const BannerImages = [
-        
-        "https://graphicsfamily.com/wp-content/uploads/edd/2022/06/Free-E-commerce-Product-Banner-Design-with-Green-Colors-scaled.jpg",
-        "https://i.ytimg.com/vi/II0cF9hFQ_g/maxresdefault.jpg",
-        "https://i.ytimg.com/vi/f64GdOxJjPE/maxresdefault.jpg",
-        "https://img.freepik.com/free-psd/special-sales-banner-template_23-2148975924.jpg",
-        "https://static.woohoo.in/media/assets/banner/unipin_voucher_-1440x274.jpg"
-    ];
+  const BannerImages = [
+    AuBank,
+    DBS_D,
+    DBS_D_Banner,
+    Lenskart_D,
+    Gyftr_Nykaa_D,
+    Reward_program_d,
+    DBS_D_Banner1,
+  ];
 
-    return (
-        <div className='w-full md:mt-8 lg:mt-36 px-4 sm:px-8 mt-96'>
-            <Slider {...settings}>
-                {BannerImages.map((image, index) => (
-                    <div key={index} className='w-full p-4 block text-center border-0'>
-                        <img 
-                            src={image} 
-                            className='rounded-lg w-full object-cover max-h-96 mx-auto' 
-                            alt={`banner-${index}`} 
-                        />
-                    </div>
-                ))}
-            </Slider>
-        </div>
-    )
+  const imageHeight = "360px"; // Set your desired height here
+
+  return (
+    <div className="w-full md:mt-8 lg:mt-36 px-2 sm:px-8 mt-64">
+      <Slider {...settings}>
+        {BannerImages.map((image, index) => (
+          <div key={index} className="w-full sm:p-4 block text-center border-0">
+            <img
+              src={image}
+              className="rounded-lg sm:w-full w-11/12  mx-auto object-cover py-10 sm:object-fill lg:h-[360px] h-52 "
+            
+              alt={`banner-${index}`}
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
 }
 
 export default BannerImages;
